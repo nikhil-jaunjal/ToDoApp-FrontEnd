@@ -1,0 +1,77 @@
+<div class="note-outer-container">
+  <div class="action-btn-section">
+    <button class="primary-btn" (click)="showNotePopup()">Add Note</button>
+  </div>
+
+  <div *ngIf="noteList.length == 0" class="empty-list-view">
+    <div class="margin-auto-auto">
+      Please Add New Note
+    </div>
+  </div>
+  <div *ngIf="showSuccessMessage" class="success-message">
+    <div class="margin-auto-auto">
+      Success
+    </div>
+  </div>
+  <div *ngIf="showErrorMessage" class="error-message">
+    <div class="margin-auto-auto">
+      Error
+    </div>
+  </div>
+
+  <div *ngIf="noteList.length > 0" class="list-view">
+    <div class="note-headers">
+      <div class="w-33">Title</div>
+      <div class="w-33">Description</div>
+      <div class="w-33">Actions</div>
+    </div>
+    <div *ngFor="let note of noteList">
+      <div class="note-details">
+        <div class="w-33">{{note.title}}</div>
+        <div class="w-33">{{note.description}}</div>
+        <div class="w-33 note-actions">
+          <div>
+            <button class="edit-btn" (click)="editNote(note)">Edit</button>
+          </div>
+          <div>
+            <button class="delete-btn" (click)="deleteNote(note.noteId)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note-popup" [ngClass]="showPopup ? 'display-block' : 'display-none'">
+  <div class="popup-close-btn-section">
+    <div>
+      <span (click)="closePopup()">x Close</span>
+    </div>
+  </div>
+  <div>
+    <div class="note-view-box">
+      <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Title *</label> <br>
+          <input type="text" name="title" formControlName="title">
+        </div>
+        <div class="form-group">
+          <label>Description *</label> <br>
+          <input type="text" name="description" formControlName="description">
+        </div>
+        <div class="form-group go-btn-adjust">
+          <button class="primary-btn" type="submit">
+            <span *ngIf="editMode">Update</span>
+            <span *ngIf="!editMode">Save</span>
+            Note</button>
+        </div>
+      </form>
+      <div class="error-box" *ngIf="invalidForm">
+        Please fill all fields with correct data
+      </div>
+      <div class="error-box" *ngIf="apiError">
+        Somthing went wrong, please try again
+      </div>
+    </div>
+  </div>
+</div>

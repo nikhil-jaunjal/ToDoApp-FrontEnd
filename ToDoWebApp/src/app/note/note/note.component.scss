@@ -1,0 +1,117 @@
+.note-outer-container {
+  height: 100%;
+  width: 100%;
+  //   background-color: #eeeded;
+}
+
+.action-btn-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 36px;
+}
+
+.empty-list-view {
+  margin: 18px;
+  padding: 18px;
+  text-align: center;
+  height: 18px;
+  color: #bb9f41;
+  text-align: center;
+  background-color: #f0ead2;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.success-message {
+  margin: 18px;
+  padding: 18px;
+  text-align: center;
+  height: 18px;
+  color: #2c8a2c;
+  text-align: center;
+  background-color: #d8ffd4;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.error-message {
+  margin: 18px;
+  padding: 18px;
+  text-align: center;
+  height: 18px;
+  color: #dd4545;
+  text-align: center;
+  background-color: #f1c7b7;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.list-view {
+  padding: 36px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.margin-auto-auto {
+  margin: auto auto;
+}
+
+.note-headers {
+  display: flex;
+  flex-direction: row;
+  font-weight: 900;
+  font-size: 20px;
+  border-bottom: solid 1px #000;
+  padding-bottom: 30px;
+}
+
+.note-details {
+  margin: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: solid 1px #ccc;
+}
+
+.note-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.note-popup {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  margin: auto auto;
+  width: 350px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.popup-close-btn-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.note-view-box {
+  margin: auto auto;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}

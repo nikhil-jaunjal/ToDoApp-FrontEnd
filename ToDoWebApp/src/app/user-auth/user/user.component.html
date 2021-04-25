@@ -1,0 +1,29 @@
+<div class="outer-container">
+  <div class="custom-flex-box">
+    <div class="user-cerdential-box" [ngClass]="invalidForm ? 'error-border' : 'normal-border'">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>First Name *</label> <br>
+          <input type="text" name="firstname" formControlName="firstName">
+        </div>
+        <div class="form-group">
+          <label>Last Name *</label> <br>
+          <input type="text" name="lastname" formControlName="lastName">
+        </div>
+        <div class="form-group">
+          <label>Email *</label> <br>
+          <input type="text" name="email" formControlName="email">
+        </div>
+        <div class="form-group go-btn-adjust">
+          <button class="primary-btn" type="submit">Go</button>
+        </div>
+      </form>
+      <div class="error-box" *ngIf="invalidForm">
+        Please fill all fields with correct data
+      </div>
+      <div class="error-box" *ngIf="apiError">
+        Somthing went wrong, please try again
+      </div>
+    </div>
+  </div>
+</div>

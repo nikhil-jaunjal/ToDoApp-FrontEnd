@@ -1,0 +1,123 @@
+$background-color: #eeeded;
+$white: white;
+$primary-color: rgb(69, 69, 150);
+$warning-color: rgb(243, 216, 65);
+$danger-color: rgb(226, 80, 80);
+
+body {
+  margin: 0;
+  background-color: #eeeded;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+input[type=text] {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 32px;
+  width: -webkit-fill-available;
+  border: solid 1px $background-color;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 4px;
+}
+
+input[type=text]:focus {
+  outline-offset: 2px;
+  outline-color: rgb(153, 153, 218);
+}
+
+.primary-btn,
+.primary-btn:focus {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  color: $white;
+  border: none;
+  outline-offset: 1px;
+  outline-color: rgb(223, 223, 236);
+  background-color: $primary-color;
+  width: 150px;
+}
+
+.edit-btn,
+.edit-btn:focus {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  color: $white;
+  border: none;
+  outline-offset: 1px;
+  outline-color: rgb(223, 223, 236);
+  background-color: $warning-color;
+  width: 70px;
+}
+
+.delete-btn,
+.delete-btn:focus {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  height: 36px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  color: $white;
+  border: none;
+  outline-offset: 1px;
+  outline-color: rgb(223, 223, 236);
+  background-color: $danger-color;
+  width: 70px;
+}
+
+.outer-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: $background-color;
+}
+
+.custom-flex-box {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.user-cerdential-box {
+  margin: auto auto;
+  width: 350px;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-border {
+  border: solid 1px rgb(212, 106, 106);
+}
+
+.normal-border {
+  border: rgba(255, 255, 255, 0.9);
+}
+
+.error-box {
+  padding: 8px;
+  height: 16px;
+  color: #d16a6a;
+  text-align: center;
+  background-color: #f0d2d2;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.w-33 {
+  width: 33.33%;
+}
